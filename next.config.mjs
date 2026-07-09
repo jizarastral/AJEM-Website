@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  },
+  output: 'export',           // ← Add this for static export
   images: {
     unoptimized: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,  // Keep if you want to skip TS errors
   },
 }
 
