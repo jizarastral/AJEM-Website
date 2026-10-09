@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   description:
     'Leading provider of HVAC, plumbing, electrical, and electro-mechanical services in the UAE. Trusted by residential and commercial clients across Dubai and beyond.',
   keywords: 'HVAC, electro mechanical, air conditioning, maintenance, UAE, Dubai, AJEM',
-  generator: 'v0.app',
 }
 
 export const viewport: Viewport = {

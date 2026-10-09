@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#101418" />
+  <title>AJEM | Abu Jasem Electro Mechanical</title>
+  <meta name="description" content="AJEM designs, installs, and maintains HVAC, electrical, and plumbing for malls, towers, and warehouses across the UAE. Established 2008 in Dubai." />
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <a class="skip" href="#practice">Skip to practice</a>
+
+  <header class="nav">
+    <a class="brand" href="#film">AJEM</a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#practice">Practice</a>
+      <a href="#projects">Projects</a>
+      <a href="#fitout">Fit-out</a>
+    </nav>
+    <a class="btn btn-sm" href="#contact">
+      <span>Book a site visit</span>
+      <span class="btn-ico" aria-hidden="true">&#8599;</span>
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="visually-hidden">Menu</span>
+      <span class="burger" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </header>
+
+  <nav id="menu" class="menu" aria-label="Mobile" inert>
+    <a href="#practice">Practice</a>
+    <a href="#projects">Projects</a>
+    <a href="#fitout">Fit-out</a>
+    <a class="btn" href="#contact">
+      <span>Book a site visit</span>
+      <span class="btn-ico" aria-hidden="true">&#8599;</span>
+    </a>
+  </nav>
+
+  <section id="film">
+    <div class="stage">
+      <figure class="clip is-on" data-shot="0">
+        <video muted playsinline preload="auto" poster="media/verify_01.png">
+          <source src="media/shot1-mall-walk.mp4" type="video/mp4" />
+        </video>
+        <div class="scrim"></div>
+        <figcaption>
+          <p class="clip-error" hidden>This clip did not load. Refresh the page.</p>
+          <p class="eyebrow">Abu Jasem Electro Mechanical</p>
+          <h1>From a pencil line<br />to an open floor.</h1>
+          <p class="sub">HVAC, power, and plumbing for malls, towers, and warehouses across the UAE.</p>
+          <div class="actions">
+            <a class="btn" href="#contact">
+              <span>Book a site visit</span>
+              <span class="btn-ico" aria-hidden="true">&#8599;</span>
+            </a>
+            <a class="btn btn-ghost" href="#projects">
+              <span>Projects</span>
+              <span class="btn-ico" aria-hidden="true">&#8599;</span>
+            </a>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="clip" data-shot="1">
+        <video muted playsinline preload="metadata" poster="media/verify_02.png">
+          <source src="media/shot2-primark-board.mp4" type="video/mp4" />
+        </video>
+        <div class="scrim"></div>
+        <figcaption>
+          <p class="clip-error" hidden>This clip did not load. Refresh the page.</p>
+          <p class="chapter">The name goes on the wall.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="clip" data-shot="2">
+        <video muted playsinline preload="metadata" poster="media/verify_03.png">
+          <source src="media/shot3-center-tilt.mp4" type="video/mp4" />
+        </video>
+        <div class="scrim"></div>
+        <figcaption>
+          <p class="clip-error" hidden>This clip did not load. Refresh the page.</p>
+          <p class="chapter">The room, drawn to measure.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="clip" data-shot="3">
+        <video muted playsinline preload="metadata" poster="media/verify_04.png">
+          <source src="media/shot4-story-reveal.mp4" type="video/mp4" />
+        </video>
+        <div class="scrim"></div>
+        <figcaption>
+          <p class="clip-error" hidden>This clip did not load. Refresh the page.</p>
+          <p class="chapter">The drawing gives way to the room.</p>
+        </figcaption>
+      </figure>
+
+      <figure class="clip" data-shot="4">
+        <video muted playsinline preload="metadata" poster="media/verify_05.png">
+          <source src="media/shot5-full-shop.mp4" type="video/mp4" />
+        </video>
+        <div class="scrim"></div>
+        <figcaption>
+          <p class="clip-error" hidden>This clip did not load. Refresh the page.</p>
+          <p class="chapter">The floor is open.</p>
+        </figcaption>
+      </figure>
+
+      <div class="play-gate" id="play-gate" hidden>
+        <button class="btn" type="button" id="play-film">
+          <span>Play the film</span>
+          <span class="btn-ico" aria-hidden="true">&#8599;</span>
+        </button>
+      </div>
+
+      <div class="film-chrome">
+        <button class="text-btn" type="button" id="pause" aria-pressed="false">Pause</button>
+        <div class="segments" role="tablist" aria-label="Film shots">
+          <button type="button" role="tab" aria-selected="true" data-go="0" aria-label="Mall drawing">
+            <i><b></b></i>
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-go="1" aria-label="Storefront drawing">
+            <i><b></b></i>
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-go="2" aria-label="Interior drawing">
+            <i><b></b></i>
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-go="3" aria-label="Drawing becomes the room">
+            <i><b></b></i>
+          </button>
+          <button type="button" role="tab" aria-selected="false" data-go="4" aria-label="Open shop floor">
+            <i><b></b></i>
+          </button>
+        </div>
+        <span class="time" id="time">0:00</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats" aria-labelledby="stats-title">
+    <div class="wrap">
+      <h2 id="stats-title" class="reveal">On UAE sites since 2008.</h2>
+      <p class="lead reveal">Developers, retail groups, and facility teams. DEWA approved.</p>
+      <div class="stat-row reveal">
+        <p><strong>2008</strong><span>Established</span></p>
+        <p><strong>200+</strong><span>Projects delivered</span></p>
+        <p><strong>50+</strong><span>Brands served</span></p>
+        <p><strong>24/7</strong><span>Emergency support</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="practice" aria-label="Practice">
+    <div class="practice-pin">
+      <div class="practice-track">
+        <article class="panel">
+          <div class="panel-copy">
+            <h2>Projects and contracting</h2>
+            <p>Large HVAC and full MEP for towers, warehouses, and master developments.</p>
+          </div>
+        </article>
+        <article class="panel panel-media">
+          <img src="media/verify_03.png" alt="Line drawing of a shop interior with display tables and a back wall." />
+          <div class="panel-shade"></div>
+          <div class="panel-copy">
+            <h2>Drawing and design</h2>
+            <p>Heat loads, single-line diagrams, shop drawings, and kitchen ventilation for authority review.</p>
+          </div>
+        </article>
+        <article class="panel panel-alt">
+          <div class="panel-copy">
+            <h2>Maintenance and AMC</h2>
+            <p>Annual contracts that keep chillers, fan coils, electrics, and plumbing running.</p>
+          </div>
+        </article>
+        <article class="panel panel-media">
+          <img src="media/verify_05.png" alt="Finished retail sales floor with clothing, mannequins, and ceiling lights." />
+          <div class="panel-shade"></div>
+          <div class="panel-copy">
+            <h2>Luxury retail fit-out</h2>
+            <p>MEP for flagship shops in Dubai Mall, Mall of the Emirates, Yas Mall, and Festival City.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="block" aria-labelledby="projects-title">
+    <div class="wrap">
+      <h2 id="projects-title" class="reveal">Work on the record.</h2>
+      <p class="lead reveal">Towers, a logistics hall, and district cooling. Scopes from the project record.</p>
+      <div class="work reveal">
+        <div class="work-names">
+          <button type="button" aria-pressed="true" data-meta="G+P+15+R residential" data-scope="Complete HVAC. Chillers, fan coils, and chilled water piping." data-who="Karma Real Estate, for EMAAR">Trinity Residences, Arjan</button>
+          <button type="button" aria-pressed="false" data-meta="B+G+6+R residential" data-scope="HVAC with district cooling." data-who="Karma Real Estate, for EMAAR">Olivia Residence, DIP-1</button>
+          <button type="button" aria-pressed="false" data-meta="Industrial warehouse" data-scope="57 air handling units, 12 fresh air units, 3 chillers. 1200 TR, SKM." data-who="DSV Solutions, with Hadeed Emirates">DSV Logistics, Mussafah</button>
+          <button type="button" aria-pressed="false" data-meta="B+G+P+9 residential" data-scope="275 fan coils and a district cooling energy transfer station. 520 TR." data-who="EMAAR">Dubai Hills Estate Tower</button>
+          <button type="button" aria-pressed="false" data-meta="2B+G+8 residential" data-scope="132 fan coils plus VRF. 250 TR, York." data-who="Majid Hilal Contracting">Barsha Residential</button>
+          <button type="button" aria-pressed="false" data-meta="Labor accommodation" data-scope="Packaged HVAC by SKM, across 4 buildings." data-who="TECOM, with Green Oasis Contracting">Labor City, TECOM DIC</button>
+        </div>
+        <div class="work-detail" aria-live="polite">
+          <p class="work-meta" id="work-meta">G+P+15+R residential</p>
+          <p class="work-scope" id="work-scope">Complete HVAC. Chillers, fan coils, and chilled water piping.</p>
+          <p class="work-who" id="work-who">Karma Real Estate, for EMAAR</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fitout" class="block" aria-labelledby="fitout-title">
+    <div class="wrap">
+      <h2 id="fitout-title" class="reveal">Flagship floors we have fitted.</h2>
+      <p class="lead reveal">MEP inside shops for these retail names.</p>
+    </div>
+    <div class="marquee" aria-label="Retail names">
+      <div class="marquee-track">
+        <span>Hugo Boss</span><span class="tick" aria-hidden="true"></span>
+        <span>YSL</span><span class="tick" aria-hidden="true"></span>
+        <span>Karl Lagerfeld</span><span class="tick" aria-hidden="true"></span>
+        <span>MaxMara</span><span class="tick" aria-hidden="true"></span>
+        <span>Victoria's Secret</span><span class="tick" aria-hidden="true"></span>
+        <span>Sephora</span><span class="tick" aria-hidden="true"></span>
+        <span>Foot Locker</span><span class="tick" aria-hidden="true"></span>
+        <span>Starbucks</span><span class="tick" aria-hidden="true"></span>
+        <span aria-hidden="true">Hugo Boss</span><span class="tick" aria-hidden="true"></span>
+        <span aria-hidden="true">YSL</span><span class="tick" aria-hidden="true"></span>
+        <span aria-hidden="true">Karl Lagerfeld</span><span class="tick" aria-hidden="true"></span>
+        <span aria-hidden="true">MaxMara</span><span class="tick" aria-hidden="true"></span>
+        <span aria-hidden="true">Victoria's Secret</span><span class="tick" aria-hidden="true"></span>
+        <span aria-hidden="true">Sephora</span><span class="tick" aria-hidden="true"></span>
+        <span aria-hidden="true">Foot Locker</span><span class="tick" aria-hidden="true"></span>
+        <span aria-hidden="true">Starbucks</span><span class="tick" aria-hidden="true"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="block" aria-labelledby="contact-title">
+    <div class="wrap contact-grid">
+      <div class="reveal">
+        <h2 id="contact-title">Book a site visit.</h2>
+        <p class="lead">Tell us the site. The first visit is free. We call back from the Dubai office.</p>
+        <address>
+          <p>Warehouse No. 5, Al Qusais Industrial Area 2, Dubai</p>
+          <p>Dubai, Abu Dhabi, Sharjah, and the Northern Emirates.</p>
+          <p><a class="quiet-link" href="tel:+97142347609">+971 4 234 7609</a></p>
+          <p><a class="quiet-link" href="mailto:info@abujasem.ae">info@abujasem.ae</a></p>
+        </address>
+      </div>
+      <form class="sheet reveal" id="visit-form" novalidate>
+        <div class="sheet-in">
+          <div class="form-row two">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required />
+              <p class="error" id="name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required />
+              <p class="error" id="phone-error" hidden></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="company">Company</label>
+            <input id="company" name="company" type="text" autocomplete="organization" />
+          </div>
+          <div class="field">
+            <label for="note">Site or job</label>
+            <p class="hint" id="note-hint">Mall, tower, or warehouse, if you already know it.</p>
+            <textarea id="note" name="note" required aria-describedby="note-hint note-error"></textarea>
+            <p class="error" id="note-error" hidden></p>
+          </div>
+          <button class="btn" type="submit">
+            <span>Book a site visit</span>
+            <span class="btn-ico" aria-hidden="true">&#8599;</span>
+          </button>
+          <p class="status" id="form-status" role="status"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap foot">
+      <p>Abu Jasem Electro Mechanical Works LLC</p>
+      <p>Established 2008</p>
+      <a class="quiet-link" href="https://www.abujasem.ae">abujasem.ae</a>
+    </div>
+  </footer>
+
+  <noscript>
+    <p class="noscript">This page plays five short films. Enable JavaScript, or call +971 4 234 7609.</p>
+  </noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+  <script src="main.js" defer></script>
+</body>
+</html>

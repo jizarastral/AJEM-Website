@@ -1,14 +1,26 @@
-import { getSession } from '@/app/actions/auth'
-import { redirect } from 'next/navigation'
-import { PublicHomepage } from '@/components/public/homepage'
+'use client'
 
-export default async function RootPage() {
-  const session = await getSession()
-  if (session?.user) {
-    const role = (session.user as { role?: string }).role ?? 'client'
-    if (role === 'admin') redirect('/admin/dashboard')
-    else if (role === 'staff') redirect('/staff/dashboard')
-    else redirect('/client/dashboard')
-  }
-  return <PublicHomepage />
+import { useEffect } from 'react'
+
+export default function RootPage() {
+  useEffect(() => {
+    window.location.replace('/show/')
+  }, [])
+
+  return (
+    <main
+      style={{
+        minHeight: '100dvh',
+        display: 'grid',
+        placeItems: 'center',
+        background: '#101418',
+        color: '#F3F0E8',
+        fontFamily: 'Segoe UI, sans-serif',
+      }}
+    >
+      <a href="/show/" style={{ color: '#F3F0E8', fontSize: '18px' }}>
+        Enter the AJEM site
+      </a>
+    </main>
+  )
 }
